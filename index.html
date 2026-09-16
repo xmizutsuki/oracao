@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f5132" />
+  <meta name="description" content="Guia em português para acompanhar as cinco orações diárias do Islã, horários, Qiblah e histórico pessoal." />
+  <title>Salah — Guia de Orações</title>
+  <style>
+    :root{--bg:#f7f4ec;--card:#fffdf7;--ink:#16322a;--muted:#6d7a75;--green:#0f5132;--green2:#1f7a4d;--gold:#c99d4c;--line:#e8e1d2;--soft:#edf6f0;--danger:#9f3f3f;--shadow:0 12px 32px rgba(35,61,49,.09);--radius:22px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:linear-gradient(180deg,#eef5ef 0,#f7f4ec 38%,#f7f4ec 100%);color:var(--ink);min-height:100vh}
+    button,input,select{font:inherit}button{cursor:pointer}.app{max-width:920px;margin:0 auto;padding:20px 16px 100px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 18px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:16px;background:var(--green);color:white;display:grid;place-items:center;font-size:24px;box-shadow:var(--shadow)}h1{font-size:1.28rem;margin:0}.subtitle{margin:3px 0 0;color:var(--muted);font-size:.9rem}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;color:var(--green);font-weight:700}
+    .hero{background:radial-gradient(circle at top right,rgba(201,157,76,.35),transparent 32%),linear-gradient(135deg,#0d4a2d,#17623c);color:white;border-radius:30px;padding:24px;box-shadow:0 20px 45px rgba(15,81,50,.22);position:relative;overflow:hidden}.hero:after{content:"☾";position:absolute;right:16px;bottom:-38px;font-size:150px;opacity:.08}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;opacity:.78;font-weight:800}.hero h2{font-size:2.2rem;margin:6px 0 4px}.hero-meta{opacity:.88;margin:0 0 18px}.countdown{font-size:1rem;font-weight:700}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{border:0;border-radius:14px;padding:12px 15px;font-weight:800}.btn-primary{background:#fff;color:var(--green)}.btn-secondary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28)}.btn-green{background:var(--green);color:white}.btn-ghost{background:#fff;color:var(--green);border:1px solid var(--line)}.btn-danger{background:#fff2f2;color:var(--danger);border:1px solid #f0d4d4}
+    .section{margin-top:22px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:0 2px 10px}.section h3{margin:0;font-size:1.05rem}.section-note{font-size:.82rem;color:var(--muted)}.progress-wrap{background:white;border:1px solid var(--line);border-radius:16px;padding:13px;margin-bottom:12px}.progress-row{display:flex;justify-content:space-between;font-size:.85rem;font-weight:700;margin-bottom:8px}.progress{height:9px;background:#eee9de;border-radius:99px;overflow:hidden}.progress>span{display:block;height:100%;background:linear-gradient(90deg,var(--green2),var(--gold));width:0;transition:.3s}
+    .prayers{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.prayer-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;min-height:138px;box-shadow:0 6px 18px rgba(40,65,53,.05);display:flex;flex-direction:column;gap:5px;position:relative}.prayer-card.current{outline:2px solid var(--gold)}.prayer-card.done{background:var(--soft)}.prayer-name{font-weight:900}.arabic{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:1.15rem}.time{font-size:1.4rem;font-weight:900;color:var(--green)}.rakah{font-size:.76rem;color:var(--muted)}.checkrow{margin-top:auto;display:flex;align-items:center;gap:8px;font-size:.8rem;font-weight:800}.checkrow input{width:19px;height:19px;accent-color:var(--green)}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}.card h4{margin:0 0 8px}.small{color:var(--muted);font-size:.85rem;line-height:1.5}.next-list{display:grid;gap:9px}.mini{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}.mini:last-child{border-bottom:0}.tag{font-size:.72rem;border-radius:999px;padding:5px 8px;background:var(--soft);color:var(--green);font-weight:800}
+    .tabs{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(680px,calc(100% - 20px));background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:20px;display:grid;grid-template-columns:repeat(5,1fr);padding:7px;box-shadow:0 18px 45px rgba(38,58,48,.18);z-index:30}.tabbtn{border:0;background:transparent;border-radius:14px;padding:9px 5px;color:var(--muted);font-size:.73rem;font-weight:800}.tabbtn.active{background:var(--soft);color:var(--green)}.tabbtn span{display:block;font-size:1.15rem;margin-bottom:2px}.view{display:none}.view.active{display:block}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{display:block;font-size:.78rem;font-weight:800;margin:0 0 6px}.field input,.field select{width:100%;border:1px solid var(--line);background:#fff;border-radius:13px;padding:11px 12px;color:var(--ink)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.notice{background:#fff8e8;border:1px solid #efd9a9;border-radius:15px;padding:12px;color:#70531f;font-size:.83rem;line-height:1.45}.success{background:#edf7f0;border-color:#cde4d4;color:#24543a}.error{background:#fff0f0;border-color:#efcece;color:#7f3030}.hidden{display:none!important}
+    .learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.learn-card{padding:18px;background:white;border:1px solid var(--line);border-radius:19px}.learn-card h4{margin:0 0 7px}.steps{display:grid;gap:10px}.step{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start;padding:12px;background:#fff;border:1px solid var(--line);border-radius:16px}.step-num{width:32px;height:32px;border-radius:10px;background:var(--soft);color:var(--green);display:grid;place-items:center;font-weight:900}.step p{margin:2px 0;color:var(--muted);font-size:.86rem;line-height:1.5}.phrase{margin-top:8px;padding:10px;border-left:3px solid var(--gold);background:#fffaf0;border-radius:8px}.phrase .ar{font-size:1.35rem;direction:rtl;text-align:right}.phrase .tr{font-weight:800;font-size:.82rem;margin-top:4px}.phrase .pt{color:var(--muted);font-size:.78rem;margin-top:3px}
+    .history-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.day{aspect-ratio:1;border-radius:13px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;align-items:center;font-weight:800}.day small{font-size:.65rem;color:var(--muted)}.day.full{background:var(--green);color:white}.day.partial{background:#f8edd4}.qibla{display:grid;place-items:center;padding:22px}.compass{width:230px;height:230px;border-radius:50%;border:8px solid #e5dfd3;position:relative;background:radial-gradient(circle,#fff 0 45%,#f4f1e8 46%)}.compass:after{content:"N";position:absolute;top:8px;left:50%;transform:translateX(-50%);font-weight:900;color:var(--muted)}.needle{position:absolute;left:50%;top:50%;width:8px;height:88px;background:linear-gradient(var(--gold) 0 50%,var(--green) 50%);border-radius:99px;transform-origin:50% 100%;transform:translate(-50%,-100%) rotate(0deg)}.needle:after{content:"◆";position:absolute;top:-20px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:24px}.qibla-angle{font-size:2rem;font-weight:900;color:var(--green);margin-top:16px}
+    .modal{position:fixed;inset:0;background:rgba(11,29,21,.72);display:none;align-items:center;justify-content:center;padding:16px;z-index:100}.modal.open{display:flex}.modal-card{background:var(--bg);width:min(720px,100%);max-height:92vh;overflow:auto;border-radius:26px;padding:18px}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:center;position:sticky;top:-18px;background:var(--bg);padding:18px 0 12px;z-index:2}.modal-head h3{margin:0}.close{border:0;background:white;border:1px solid var(--line);width:38px;height:38px;border-radius:12px;font-size:20px}.guide-step{text-align:center;background:white;border:1px solid var(--line);border-radius:24px;padding:24px;margin-top:8px}.pose{font-size:3rem;margin:10px 0}.guide-step h4{font-size:1.25rem;margin:4px}.guide-step p{color:var(--muted);line-height:1.55}.guide-nav{display:flex;justify-content:space-between;gap:10px;margin-top:14px}.prep{display:grid;gap:9px;text-align:left;margin:16px 0}.prep label{background:#f8f6ef;border-radius:13px;padding:11px;display:flex;gap:9px;align-items:center}.prep input{width:19px;height:19px;accent-color:var(--green)}
+    @media(max-width:760px){.prayers{grid-template-columns:repeat(2,1fr)}.prayer-card:last-child{grid-column:span 2}.grid{grid-template-columns:1fr}.hero h2{font-size:1.9rem}.form-grid,.learn-grid{grid-template-columns:1fr}.app{padding:14px 12px 96px}.topbar .pill{display:none}.tabs{bottom:7px}.tabbtn{font-size:.66rem}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="logo">☾</div><div><h1>Salah</h1><p class="subtitle">Guia pessoal de orações em português</p></div></div>
+      <button class="pill" id="locationPill" data-tab="settings">Configurar localização</button>
+    </header>
+
+    <section id="today" class="view active">
+      <div class="hero">
+        <div class="eyebrow">Próxima oração</div>
+        <h2 id="nextPrayerName">Configure sua localização</h2>
+        <p class="hero-meta" id="dateLine">—</p>
+        <div class="countdown" id="countdown">Os horários serão calculados para a sua cidade.</div>
+        <div class="hero-actions"><button class="btn btn-primary" id="startNextBtn" disabled>Começar oração</button><button class="btn btn-secondary" id="refreshBtn">Atualizar horários</button></div>
+      </div>
+
+      <div class="section">
+        <div class="section-head"><h3>Orações de hoje</h3><span class="section-note" id="progressText">0 de 5 concluídas</span></div>
+        <div class="progress-wrap"><div class="progress-row"><span>Seu acompanhamento pessoal</span><span id="progressPct">0%</span></div><div class="progress"><span id="progressBar"></span></div></div>
+        <div class="prayers" id="prayerCards"></div>
+      </div>
+
+      <div class="section grid">
+        <article class="card"><h4>Como usar</h4><p class="small">Marque uma oração somente depois de concluí-la. Os registros ficam armazenados apenas neste navegador. O guia foi pensado para aprendizado e acompanhamento pessoal, sem pontuação ou ranking.</p><div class="actions"><button class="btn btn-green" data-tab="learn">Aprender Salah</button><button class="btn btn-ghost" data-tab="qibla">Ver Qiblah</button></div></article>
+        <article class="card"><h4>Horários adicionais</h4><div class="next-list" id="extraTimes"><div class="mini"><span>Nascer do sol</span><strong>—</strong></div></div></article>
+      </div>
+    </section>
+
+    <section id="learn" class="view">
+      <div class="section-head"><div><h3>Aprender a Salah</h3><span class="section-note">Treine sem registrar como oração realizada</span></div></div>
+      <div class="notice">As descrições seguem uma forma amplamente ensinada da oração sunita. Existem diferenças legítimas entre escolas jurídicas e comunidades. Para dúvidas específicas, consulte uma mesquita ou pessoa qualificada.</div>
+      <div class="section learn-grid" id="learnPrayerCards"></div>
+      <div class="section"><h3 style="margin-bottom:10px">Sequência essencial</h3><div class="steps" id="essentialSteps"></div></div>
+    </section>
+
+    <section id="qibla" class="view">
+      <div class="section-head"><div><h3>Direção da Qiblah</h3><span class="section-note">Direção aproximada para a Kaaba em Makkah</span></div></div>
+      <article class="card qibla"><div class="compass"><div class="needle" id="qiblaNeedle"></div></div><div class="qibla-angle" id="qiblaAngle">—</div><p class="small" id="qiblaText">Configure sua localização para calcular a direção.</p></article>
+      <div class="notice" style="margin-top:12px">A seta mostra o ângulo em relação ao norte geográfico. A bússola do aparelho pode sofrer interferência magnética; confirme a direção local quando necessário.</div>
+    </section>
+
+    <section id="history" class="view">
+      <div class="section-head"><div><h3>Histórico</h3><span class="section-note">Últimos 28 dias neste dispositivo</span></div><button class="btn btn-danger" id="clearHistory">Limpar histórico</button></div>
+      <div class="card"><div class="history-grid" id="historyGrid"></div></div>
+      <p class="small">Verde = 5/5 registradas. Dourado claro = parcialmente registradas. Branco = nenhuma registrada.</p>
+    </section>
+
+    <section id="settings" class="view">
+      <div class="section-head"><div><h3>Configurações</h3><span class="section-note">Horários e preferências ficam salvos no navegador</span></div></div>
+      <article class="card">
+        <div class="form-grid">
+          <div class="field"><label for="city">Cidade</label><input id="city" placeholder="Ex.: Brasília" autocomplete="address-level2" /></div>
+          <div class="field"><label for="country">País</label><input id="country" value="Brazil" placeholder="Brazil" autocomplete="country-name" /></div>
+          <div class="field"><label for="method">Método de cálculo</label><select id="method"><option value="3">Muslim World League</option><option value="2">ISNA</option><option value="5">Egyptian General Authority</option><option value="4">Umm Al-Qura, Makkah</option><option value="1">University of Islamic Sciences, Karachi</option><option value="8">Gulf Region</option><option value="13">Diyanet, Turquia</option></select></div>
+          <div class="field"><label for="school">Cálculo do Asr</label><select id="school"><option value="0">Padrão (Shafi'i, Maliki, Hanbali)</option><option value="1">Hanafi</option></select></div>
+        </div>
+        <div class="actions"><button class="btn btn-green" id="saveSettings">Salvar e calcular</button><button class="btn btn-ghost" id="useLocation">Usar minha localização</button></div>
+        <div id="settingsStatus" class="notice hidden" style="margin-top:12px"></div>
+      </article>
+      <article class="card" style="margin-top:14px"><h4>Privacidade</h4><p class="small">O app não exige conta. Cidade, preferências e histórico de orações são salvos no armazenamento local do navegador. Ao escolher “Usar minha localização”, as coordenadas são usadas para calcular os horários e a Qiblah.</p></article>
+      <article class="card" style="margin-top:14px"><h4>Sobre os horários</h4><p class="small">Os horários são obtidos pelo serviço AlAdhan e podem variar alguns minutos conforme o método de cálculo e a prática da sua comunidade local. Escolha o método usado pela autoridade ou mesquita que você segue.</p></article>
+    </section>
+  </main>
+
+  <nav class="tabs" aria-label="Navegação principal">
+    <button class="tabbtn active" data-tab="today"><span>⌂</span>Hoje</button><button class="tabbtn" data-tab="learn"><span>☰</span>Aprender</button><button class="tabbtn" data-tab="qibla"><span>⌁</span>Qiblah</button><button class="tabbtn" data-tab="history"><span>✓</span>Histórico</button><button class="tabbtn" data-tab="settings"><span>⚙</span>Ajustes</button>
+  </nav>
+
+  <div class="modal" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="modal-card"><div class="modal-head"><h3 id="guideTitle">Guia da oração</h3><button class="close" id="closeGuide" aria-label="Fechar">×</button></div><div id="guideContent"></div></div>
+  </div>
+
+<script>
+const PRAYERS=[
+  {id:'Fajr',pt:'Fajr',ar:'الفجر',rakah:2},
+  {id:'Dhuhr',pt:'Dhuhr',ar:'الظهر',rakah:4},
+  {id:'Asr',pt:'Asr',ar:'العصر',rakah:4},
+  {id:'Maghrib',pt:'Maghrib',ar:'المغرب',rakah:3},
+  {id:'Isha',pt:'Isha',ar:'العشاء',rakah:4}
+];
+const KAABA={lat:21.422487,lng:39.826206};
+const STORAGE={settings:'salah-settings-v1',history:'salah-history-v1',timings:'salah-timings-v1'};
+const defaultSettings={city:'',country:'Brazil',method:'3',school:'0',lat:null,lng:null,mode:'city'};
+let settings=loadJSON(STORAGE.settings,defaultSettings), dayData=null, timer=null, guideState=null;
+
+const baseSteps=[
+  {title:'Niyyah — intenção',icon:'♡',text:'Tenha no coração a intenção consciente de realizar a oração obrigatória correspondente. Não é necessário transformar a intenção em uma frase falada específica.'},
+  {title:'Takbir inicial',icon:'☝',text:'Em pé e voltado para a Qiblah, inicie a oração dizendo:',phrase:['اللّٰهُ أَكْبَر','Allahu Akbar','Allah é o Maior.']},
+  {title:'Recitação em pé (Qiyam)',icon:'│',text:'Recite Al-Fatihah. Nas primeiras duas rak‘ahs, normalmente recita-se também outra surah ou alguns versículos.',phrase:['بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ','Bismillahir-Rahmanir-Rahim','Em nome de Allah, o Misericordioso, o Misericordiador.']},
+  {title:'Ruku‘',icon:'⌒',text:'Diga “Allahu Akbar” e incline-se, mantendo uma postura estável. Glorifique Allah no Ruku‘.',phrase:['سُبْحَانَ رَبِّيَ الْعَظِيمِ','Subhana Rabbiyal-‘Azim','Glorificado seja meu Senhor, o Magnífico.']},
+  {title:'Retorno do Ruku‘',icon:'↑',text:'Retorne à posição em pé.',phrase:['سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ','Sami‘Allahu liman hamidah','Allah ouve quem O louva.']},
+  {title:'Sujud — primeira prostração',icon:'⌄',text:'Diga “Allahu Akbar” e faça a prostração. Glorifique Allah.',phrase:['سُبْحَانَ رَبِّيَ الأَعْلَى','Subhana Rabbiyal-A‘la','Glorificado seja meu Senhor, o Altíssimo.']},
+  {title:'Sentar entre as prostrações',icon:'◡',text:'Diga “Allahu Akbar”, sente-se brevemente e peça perdão.',phrase:['رَبِّ اغْفِرْ لِي','Rabbighfir li','Meu Senhor, perdoa-me.']},
+  {title:'Segundo Sujud',icon:'⌄',text:'Faça a segunda prostração. Depois, levante-se para a próxima rak‘ah, quando houver.'},
+  {title:'Tashahhud',icon:'◡',text:'Após duas rak‘ahs, sente-se para o Tashahhud. Em orações de 3 ou 4 rak‘ahs, este é o Tashahhud intermediário; na última rak‘ah, faça o Tashahhud final e as saudações ao Profeta ﷺ.'},
+  {title:'Taslim',icon:'↔',text:'Para encerrar, vire a cabeça para a direita e depois para a esquerda, dizendo a saudação.',phrase:['السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ','Assalamu ‘alaykum wa rahmatullah','Que a paz e a misericórdia de Allah estejam sobre vocês.']}
+];
+
+function loadJSON(key,fallback){try{return JSON.parse(localStorage.getItem(key))??structuredClone(fallback)}catch{return structuredClone(fallback)}}
+function saveJSON(key,val){localStorage.setItem(key,JSON.stringify(val))}
+function todayKey(d=new Date()){return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')}
+function history(){return loadJSON(STORAGE.history,{})}
+function currentDone(){return history()[todayKey()]||{}}
+function setDone(id,done){const h=history(),k=todayKey();h[k]=h[k]||{};h[k][id]=done;if(!Object.values(h[k]).some(Boolean)) delete h[k];saveJSON(STORAGE.history,h);renderPrayerCards();renderHistory()}
+function cleanTime(v){return (v||'—').replace(/\s*\(.+?\)\s*/g,'').trim()}
+function timeToDate(hm,base=new Date()){if(!hm||hm==='—')return null;const [h,m]=hm.split(':').map(Number);const d=new Date(base);d.setHours(h,m,0,0);return d}
+function formatDate(d){return new Intl.DateTimeFormat('pt-BR',{weekday:'long',day:'numeric',month:'long'}).format(d)}
+function setStatus(msg,type='success'){const el=document.getElementById('settingsStatus');el.className='notice '+type;el.textContent=msg}
+
+async function fetchTimings(){
+  if(!settings.city && settings.mode!=='coords'){showTab('settings');setStatus('Informe sua cidade ou use a localização do dispositivo.','error');return}
+  try{
+    setStatus('Calculando horários…','success');
+    const stamp=Math.floor(Date.now()/1000);let url;
+    if(settings.mode==='coords'&&settings.lat!=null&&settings.lng!=null){url=`https://api.aladhan.com/v1/timings/${stamp}?latitude=${encodeURIComponent(settings.lat)}&longitude=${encodeURIComponent(settings.lng)}&method=${settings.method}&school=${settings.school}`}
+    else{url=`https://api.aladhan.com/v1/timingsByCity/${stamp}?city=${encodeURIComponent(settings.city)}&country=${encodeURIComponent(settings.country)}&method=${settings.method}&school=${settings.school}`}
+    const r=await fetch(url);if(!r.ok)throw new Error('Não foi possível consultar os horários.');const j=await r.json();if(j.code!==200||!j.data)throw new Error(j.status||'Resposta inválida do serviço de horários.');
+    dayData=j.data;saveJSON(STORAGE.timings,{key:todayKey(),data:dayData,settings});
+    if(j.data.meta?.latitude!=null){settings.lat=j.data.meta.latitude;settings.lng=j.data.meta.longitude;saveJSON(STORAGE.settings,settings)}
+    renderAll();setStatus('Horários atualizados com sucesso.','success');
+  }catch(e){const cached=loadJSON(STORAGE.timings,null);if(cached?.key===todayKey()){dayData=cached.data;renderAll();setStatus('Sem conexão: usando os horários salvos de hoje.','error')}else setStatus(e.message||'Erro ao calcular os horários.','error')}
+}
+
+function renderAll(){renderHeader();renderPrayerCards();renderExtras();renderHistory();renderQibla();renderLearn();updateCountdown()}
+function renderHeader(){
+  const now=new Date();let line=formatDate(now);const hijri=dayData?.date?.hijri;if(hijri)line+=` • ${hijri.day} ${hijri.month?.en||''} ${hijri.year} AH`;document.getElementById('dateLine').textContent=line;
+  document.getElementById('locationPill').textContent=settings.mode==='coords'?'Localização atual':(settings.city||'Configurar localização');
+}
+function getCurrentNext(){if(!dayData)return{current:null,next:null};const now=new Date();const list=PRAYERS.map(p=>({...p,date:timeToDate(cleanTime(dayData.timings[p.id]))}));for(let i=0;i<list.length;i++){const start=list[i].date,end=i<list.length-1?list[i+1].date:new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0);if(now>=start&&now<end)return{current:list[i],next:list[i+1]||null}}
+  if(now<list[0].date)return{current:null,next:list[0]};return{current:list[list.length-1],next:null};}
+function updateCountdown(){clearTimeout(timer);const name=document.getElementById('nextPrayerName'),ct=document.getElementById('countdown'),btn=document.getElementById('startNextBtn');if(!dayData){name.textContent='Configure sua localização';ct.textContent='Os horários serão calculados para a sua cidade.';btn.disabled=true;return}
+  const {current,next}=getCurrentNext();const now=new Date();let target=next;if(!target){target={...PRAYERS[0],date:timeToDate(cleanTime(dayData.timings.Fajr),new Date(now.getFullYear(),now.getMonth(),now.getDate()+1))}}
+  const diff=Math.max(0,target.date-now),h=Math.floor(diff/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);name.textContent=target.pt;ct.textContent=`${target.pt} começa em ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')} • ${target.date.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}`;btn.disabled=false;btn.onclick=()=>openGuide(target.id,false);document.querySelectorAll('.prayer-card').forEach(x=>x.classList.toggle('current',x.dataset.id===current?.id));timer=setTimeout(updateCountdown,1000)}
+function renderPrayerCards(){const wrap=document.getElementById('prayerCards'),done=currentDone();wrap.innerHTML=PRAYERS.map(p=>{const tm=dayData?cleanTime(dayData.timings[p.id]):'—';return `<article class="prayer-card ${done[p.id]?'done':''}" data-id="${p.id}"><div class="prayer-name">${p.pt}</div><div class="arabic" dir="rtl">${p.ar}</div><div class="time">${tm}</div><div class="rakah">${p.rakah} rak‘ahs Fard</div><label class="checkrow"><input type="checkbox" data-check="${p.id}" ${done[p.id]?'checked':''}> ${done[p.id]?'Realizada':'Marcar realizada'}</label><button class="btn btn-ghost" style="padding:8px;margin-top:6px" data-start="${p.id}">Guia</button></article>`}).join('');wrap.querySelectorAll('[data-check]').forEach(el=>el.addEventListener('change',e=>setDone(e.target.dataset.check,e.target.checked)));wrap.querySelectorAll('[data-start]').forEach(el=>el.addEventListener('click',e=>openGuide(e.target.dataset.start,false)));const n=PRAYERS.filter(p=>done[p.id]).length,pct=n*20;document.getElementById('progressText').textContent=`${n} de 5 concluídas`;document.getElementById('progressPct').textContent=`${pct}%`;document.getElementById('progressBar').style.width=`${pct}%`;updateCountdown()}
+function renderExtras(){const x=document.getElementById('extraTimes');if(!dayData){x.innerHTML='<div class="mini"><span>Nascer do sol</span><strong>—</strong></div>';return}x.innerHTML=[['Nascer do sol','Sunrise'],['Meia-noite','Midnight'],['Imsak','Imsak']].map(([a,b])=>`<div class="mini"><span>${a}</span><strong>${cleanTime(dayData.timings[b])}</strong></div>`).join('')}
+function renderHistory(){const h=history(),grid=document.getElementById('historyGrid');if(!grid)return;let html='';for(let i=27;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);const k=todayKey(d),rec=h[k]||{},n=PRAYERS.filter(p=>rec[p.id]).length;html+=`<div class="day ${n===5?'full':n>0?'partial':''}" title="${formatDate(d)}: ${n}/5"><span>${d.getDate()}</span><small>${n}/5</small></div>`}grid.innerHTML=html}
+function bearing(lat1,lon1,lat2,lon2){const r=x=>x*Math.PI/180,deg=x=>x*180/Math.PI;const y=Math.sin(r(lon2-lon1))*Math.cos(r(lat2));const x=Math.cos(r(lat1))*Math.sin(r(lat2))-Math.sin(r(lat1))*Math.cos(r(lat2))*Math.cos(r(lon2-lon1));return (deg(Math.atan2(y,x))+360)%360}
+function renderQibla(){const a=document.getElementById('qiblaAngle'),t=document.getElementById('qiblaText'),n=document.getElementById('qiblaNeedle');if(settings.lat==null||settings.lng==null){a.textContent='—';t.textContent='Configure sua localização para calcular a direção.';n.style.transform='translate(-50%,-100%) rotate(0deg)';return}const b=bearing(Number(settings.lat),Number(settings.lng),KAABA.lat,KAABA.lng);a.textContent=`${Math.round(b)}°`;t.textContent=`A partir da sua localização, a Qiblah está aproximadamente a ${Math.round(b)}° do norte.`;n.style.transform=`translate(-50%,-100%) rotate(${b}deg)`}
+function renderLearn(){document.getElementById('learnPrayerCards').innerHTML=PRAYERS.map(p=>`<article class="learn-card"><h4>${p.pt} <span class="arabic" dir="rtl">${p.ar}</span></h4><p class="small">${p.rakah} rak‘ahs obrigatórias (Fard).</p><button class="btn btn-green" data-practice="${p.id}">Praticar passo a passo</button></article>`).join('');document.querySelectorAll('[data-practice]').forEach(b=>b.onclick=()=>openGuide(b.dataset.practice,true));document.getElementById('essentialSteps').innerHTML=baseSteps.map((s,i)=>`<div class="step"><div class="step-num">${i+1}</div><div><strong>${s.title}</strong><p>${s.text}</p>${s.phrase?`<div class="phrase"><div class="ar">${s.phrase[0]}</div><div class="tr">${s.phrase[1]}</div><div class="pt">${s.phrase[2]}</div></div>`:''}</div></div>`).join('')}
+
+function prayerSequence(id){const p=PRAYERS.find(x=>x.id===id),seq=[{type:'prep',title:`Preparação para ${p.pt}`,icon:'☾',text:`${p.pt} possui ${p.rakah} rak‘ahs Fard.`}];for(let r=1;r<=p.rakah;r++){seq.push({title:`Rak‘ah ${r}: Qiyam e recitação`,icon:'│',text:r<=2?'Em pé, recite Al-Fatihah e depois outra surah ou versículos, conforme sua prática.':'Em pé, recite Al-Fatihah.',phrase:['اللّٰهُ أَكْبَر','Allahu Akbar','Allah é o Maior.']},{title:`Rak‘ah ${r}: Ruku‘`,icon:'⌒',text:'Incline-se para o Ruku‘ e glorifique Allah.',phrase:['سُبْحَانَ رَبِّيَ الْعَظِيمِ','Subhana Rabbiyal-‘Azim','Glorificado seja meu Senhor, o Magnífico.']},{title:`Rak‘ah ${r}: levantar do Ruku‘`,icon:'↑',text:'Retorne à posição em pé antes de ir para a prostração.',phrase:['سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ','Sami‘Allahu liman hamidah','Allah ouve quem O louva.']},{title:`Rak‘ah ${r}: primeiro Sujud`,icon:'⌄',text:'Faça a primeira prostração.',phrase:['سُبْحَانَ رَبِّيَ الأَعْلَى','Subhana Rabbiyal-A‘la','Glorificado seja meu Senhor, o Altíssimo.']},{title:`Rak‘ah ${r}: sentar`,icon:'◡',text:'Sente-se brevemente entre as duas prostrações.',phrase:['رَبِّ اغْفِرْ لِي','Rabbighfir li','Meu Senhor, perdoa-me.']},{title:`Rak‘ah ${r}: segundo Sujud`,icon:'⌄',text:'Faça a segunda prostração.'});if(r===2&&p.rakah>2)seq.push({title:'Tashahhud intermediário',icon:'◡',text:'Permaneça sentado para o Tashahhud intermediário e depois levante para a próxima rak‘ah.'});}
+  seq.push({title:'Tashahhud final',icon:'◡',text:'Na posição sentada, faça o Tashahhud final e as saudações ao Profeta ﷺ conforme a forma que você aprendeu.'},{title:'Taslim',icon:'↔',text:'Encerre virando a cabeça para a direita e depois para a esquerda.',phrase:['السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ','Assalamu ‘alaykum wa rahmatullah','Que a paz e a misericórdia de Allah estejam sobre vocês.']},{type:'finish',title:`${p.pt} concluída`,icon:'✓',text:'Alhamdulillah. Você chegou ao fim do guia.'});return seq}
+function openGuide(id,practice){guideState={id,practice,index:0,seq:prayerSequence(id)};document.getElementById('guideModal').classList.add('open');renderGuide()}
+function renderGuide(){const g=guideState,s=g.seq[g.index],p=PRAYERS.find(x=>x.id===g.id);document.getElementById('guideTitle').textContent=`${g.practice?'Treino':'Oração'} • ${p.pt}`;let body='';if(s.type==='prep')body=`<div class="guide-step"><div class="pose">${s.icon}</div><h4>${s.title}</h4><p>${s.text}</p><div class="prep"><label><input type="checkbox" class="prepcheck"> Estou com Wudu quando necessário</label><label><input type="checkbox" class="prepcheck"> Estou voltado para a Qiblah</label><label><input type="checkbox" class="prepcheck"> Tenho a intenção de realizar ${p.pt}</label></div><div class="notice">O guia serve como apoio de aprendizagem. Evite manipular o telefone durante a oração se isso prejudicar sua concentração ou sua prática.</div></div>`;else body=`<div class="guide-step"><div class="pose">${s.icon}</div><div class="eyebrow" style="color:var(--green)">Etapa ${g.index+1} de ${g.seq.length}</div><h4>${s.title}</h4><p>${s.text}</p>${s.phrase?`<div class="phrase" style="text-align:left"><div class="ar">${s.phrase[0]}</div><div class="tr">${s.phrase[1]}</div><div class="pt">${s.phrase[2]}</div></div>`:''}${s.type==='finish'&&!g.practice?`<button class="btn btn-green" style="margin-top:14px" id="finishPrayer">✓ Marcar ${p.pt} como realizada</button>`:''}</div>`;body+=`<div class="guide-nav"><button class="btn btn-ghost" id="prevStep" ${g.index===0?'disabled':''}>← Anterior</button><button class="btn btn-green" id="nextStep" ${g.index===g.seq.length-1?'disabled':''}>Próximo →</button></div>`;document.getElementById('guideContent').innerHTML=body;document.getElementById('prevStep').onclick=()=>{g.index=Math.max(0,g.index-1);renderGuide()};document.getElementById('nextStep').onclick=()=>{g.index=Math.min(g.seq.length-1,g.index+1);renderGuide()};const finish=document.getElementById('finishPrayer');if(finish)finish.onclick=()=>{setDone(g.id,true);document.getElementById('guideModal').classList.remove('open')}}
+
+function showTab(id){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.addEventListener('click',e=>{const tab=e.target.closest('[data-tab]');if(tab)showTab(tab.dataset.tab)});
+document.getElementById('closeGuide').onclick=()=>document.getElementById('guideModal').classList.remove('open');document.getElementById('guideModal').addEventListener('click',e=>{if(e.target.id==='guideModal')e.currentTarget.classList.remove('open')});
+document.getElementById('refreshBtn').onclick=fetchTimings;
+document.getElementById('saveSettings').onclick=()=>{settings={...settings,city:document.getElementById('city').value.trim(),country:document.getElementById('country').value.trim()||'Brazil',method:document.getElementById('method').value,school:document.getElementById('school').value,mode:'city',lat:null,lng:null};if(!settings.city){setStatus('Informe uma cidade.','error');return}saveJSON(STORAGE.settings,settings);fetchTimings();showTab('today')};
+document.getElementById('useLocation').onclick=()=>{if(!navigator.geolocation){setStatus('Seu navegador não oferece geolocalização.','error');return}setStatus('Solicitando permissão de localização…','success');navigator.geolocation.getCurrentPosition(pos=>{settings={...settings,lat:pos.coords.latitude,lng:pos.coords.longitude,mode:'coords'};saveJSON(STORAGE.settings,settings);fetchTimings();showTab('today')},()=>setStatus('Não foi possível acessar sua localização. Você pode informar a cidade manualmente.','error'),{enableHighAccuracy:false,timeout:10000,maximumAge:600000})};
+document.getElementById('clearHistory').onclick=()=>{if(confirm('Apagar todo o histórico salvo neste navegador?')){localStorage.removeItem(STORAGE.history);renderPrayerCards();renderHistory()}};
+
+function init(){document.getElementById('city').value=settings.city||'';document.getElementById('country').value=settings.country||'Brazil';document.getElementById('method').value=settings.method||'3';document.getElementById('school').value=settings.school||'0';const cached=loadJSON(STORAGE.timings,null);if(cached?.key===todayKey()&&JSON.stringify(cached.settings)===JSON.stringify(settings))dayData=cached.data;renderAll();if(settings.city||settings.mode==='coords')fetchTimings();else showTab('settings')}
+init();
+</script>
+</body>
+</html>
