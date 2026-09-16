@@ -135,9 +135,9 @@ async function fetchTimings(){
   if(!settings.city && settings.mode!=='coords'){showTab('settings');setStatus('Informe sua cidade ou use a localização do dispositivo.','error');return}
   try{
     setStatus('Calculando horários…','success');
-    const stamp=Math.floor(Date.now()/1000);let url;
-    if(settings.mode==='coords'&&settings.lat!=null&&settings.lng!=null){url=`https://api.aladhan.com/v1/timings/${stamp}?latitude=${encodeURIComponent(settings.lat)}&longitude=${encodeURIComponent(settings.lng)}&method=${settings.method}&school=${settings.school}`}
-    else{url=`https://api.aladhan.com/v1/timingsByCity/${stamp}?city=${encodeURIComponent(settings.city)}&country=${encodeURIComponent(settings.country)}&method=${settings.method}&school=${settings.school}`}
+    const now=new Date();const apiDate=`${String(now.getDate()).padStart(2,'0')}-${String(now.getMonth()+1).padStart(2,'0')}-${now.getFullYear()}`;let url;
+    if(settings.mode==='coords'&&settings.lat!=null&&settings.lng!=null){url=`https://api.aladhan.com/v1/timings/${apiDate}?latitude=${encodeURIComponent(settings.lat)}&longitude=${encodeURIComponent(settings.lng)}&method=${settings.method}&school=${settings.school}`}
+    else{url=`https://api.aladhan.com/v1/timingsByCity/${apiDate}?city=${encodeURIComponent(settings.city)}&country=${encodeURIComponent(settings.country)}&method=${settings.method}&school=${settings.school}`}
     const r=await fetch(url);if(!r.ok)throw new Error('Não foi possível consultar os horários.');const j=await r.json();if(j.code!==200||!j.data)throw new Error(j.status||'Resposta inválida do serviço de horários.');
     dayData=j.data;saveJSON(STORAGE.timings,{key:todayKey(),data:dayData,settings});
     if(j.data.meta?.latitude!=null){settings.lat=j.data.meta.latitude;settings.lng=j.data.meta.longitude;saveJSON(STORAGE.settings,settings)}
